@@ -1,4 +1,4 @@
-# RanFeng Android Sdk——接入文档 V2.1.0.1
+# RanFeng Android Sdk——接入文档 V2.1.0.2
 
 
 ## 1. 概述
@@ -93,7 +93,7 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
 
     // ADRanFengSDK广告SDK
-    implementation(name: 'RanFengSDK-2.1.0.1', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.2', ext: 'aar')
 }
 ```
 
