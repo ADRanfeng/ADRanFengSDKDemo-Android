@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ranfeng.adranfengsdkdemo">
+
+    <!-- 广告必须的权限，允许网络访问 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 广告必须的权限，允许安装未知来源权限（如下载类广告下载完成后唤起安卓） -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <!-- 广告必须的权限，地理位置权限，获取位置信息，用于广告投放。精准广告投放及反作弊 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 广告可选权限，提升广告填充，允许应用检测网络状态，SDK 会根据网络状态选择是否发送数据 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 广告可选权限，提升广告填充，允许应用获取 MAC 地址。广告投放及广告监测归因、反作弊 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 广告可选权限，提升广告填充，影响广告填充，强烈建议的权限，获取设备信息，允许应用获取手机状态（包括手机号码、IMEI、IMSI权限等）。广告投放及广告监测归因、反作弊 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 为了提高广告收益，建议设置的权限，获取粗略位置信息。精准广告投放及反作弊 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-sdk
+        tools:overrideLibrary="com.bun.miitmdid"/>
+
+    <application
+        android:name="com.ranfeng.adranfengsdkdemo.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/ranfeng_network_security_config"
+        tools:replace="android:networkSecurityConfig">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.SplashAdActivity"
+            android:theme="@style/splash">
+
+        </activity>
+        <activity android:name="com.ranfeng.adranfengsdkdemo.MainActivity"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.BannerAdActivity" />
+
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.NativeExpressAdActivity" />
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.NativeAdActivity" />
+
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.NativeBidExpressAdActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.NativeBidAdActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.InterstitialAdActivity" />
+        <activity android:name="com.ranfeng.adranfengsdkdemo.ad.RewardAdActivity" />
+
+
+
+    </application>
+
+</manifest>

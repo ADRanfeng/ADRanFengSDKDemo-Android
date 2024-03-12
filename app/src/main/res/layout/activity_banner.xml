@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8A064146">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="550dp" />
+
+            <Button
+                android:id="@+id/btnToInterstitialActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="去插屏页面"
+                android:layout_marginTop="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="#b0cce5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="#e5a9a0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="#b0cce5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="550dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flContainer"/>
+
+</RelativeLayout>
