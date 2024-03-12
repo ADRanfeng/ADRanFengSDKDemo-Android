@@ -22,7 +22,7 @@
     <td>APP启动界面常会使用开屏广告</td>
   </tr>
   <tr>
-    <td><a href="#ad_banner">Banner广告</a></td>
+    <td><a href="#ad_banner">横幅广告</a></td>
     <td>Banner广告是横向贯穿整个可视页面的模板广告，需要将Banner广告视图添加到承载的广告容器中</td>
     <td>任意界面的固定位置，不建议放在RecyclerView、List这种滚动布局中当item</td>
   </tr>
@@ -453,7 +453,7 @@ splashAd.loadAd(String posId);
 
 ### <a name="ad_banner">6.3 横幅广告</a>
 
-Banner横幅广告建议放置在 **固定位置**，而非ListView、RecyclerView、ViewPager等控件中充当Item，Banner广告支持多种尺寸比例，可在后台创建广告位时配置，Banner广告的宽度将会撑满容器，高度自适应，建议Banner广告容器高度也为自适应。
+横幅广告建议放置在 **固定位置**，而非ListView、RecyclerView、ViewPager等控件中充当Item，横幅广告支持多种尺寸比例，可在后台创建广告位时配置，Banner广告的宽度将会撑满容器，高度自适应，建议Banner广告容器高度也为自适应。
 
 #### 6.3.1 横幅广告主要 API
 
@@ -524,7 +524,7 @@ bannerAd.loadAd(String posId);
 ```
 
 
->[Banner广告示例详情](https://github.com/ADRanfeng/ADRanFengSDKDemo-Android/blob/master/app/src/main/java/com/ranfeng/adranfengsdkdemo/ad/BannerAdActivity.java)
+>[横幅广告示例详情](https://github.com/ADRanfeng/ADRanFengSDKDemo-Android/blob/master/app/src/main/java/com/ranfeng/adranfengsdkdemo/ad/BannerAdActivity.java)
 
 
 
