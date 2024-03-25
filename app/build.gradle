@@ -52,6 +52,6 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
 
     //ADRanFengSDK依赖
-    implementation(name: 'RanFengSDK-2.1.0.2', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.3', ext: 'aar')
 
 }
